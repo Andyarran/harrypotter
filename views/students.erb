@@ -1,0 +1,35 @@
+<h1>Student Section</h1><br><br> 
+<hr />
+<h3>Add Student to School</h3><br>
+
+<form method="post" action="/hogwarts/students">
+  <label for="first-name">First Name:</label>
+    <input id="first-name" type="text" name="first_name" />
+  
+
+  <label for="last-name">Last Name:</label>
+    <input id="last-name" type="text" name="last_name">
+  
+
+  <label for="house-select">Select a House</label>
+    <select id="house-select" name="house_id">
+      <% @houses.each do |house|  %>
+        <option value=<%= house.id %> > <%= house.name %></option>
+      <% end  %>
+    </select>
+  
+
+  <input type='submit' value="Add Student"/>
+</form>
+<br><br>
+<hr />
+<br>
+<h2>Students currently enrolled</h2><br> 
+<% @students.each do |student| %>
+  <p>First Name: <%= student.first_name %></p>
+  <p>Surname: <%= student.last_name  %></p>
+  <p>House: <%= student.find_house.name  %></p>
+  <br>
+  <hr />
+  <br>
+  <% end %>
