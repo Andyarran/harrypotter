@@ -21,7 +21,6 @@
 #divnav {
 opacity: 0.7;
 filter: (opacity=70);
-
 }
 
 
@@ -48,7 +47,7 @@ float: right;
 
 #divnav ul li:hover {
   background: #64D1B7;
-  transition:all 0.60s;
+  transition:all 1.80s;
 }
 
 #divnav h1 {
